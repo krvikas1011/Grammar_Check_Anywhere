@@ -27,7 +27,7 @@ CREATE TABLE `new_words` (
   `word` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`uid`),
   UNIQUE KEY `uid_UNIQUE` (`uid`),
-  CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`)
+  CONSTRAINT `FKNEWWORDS_uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='This table is going to hold the new words added per user.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
